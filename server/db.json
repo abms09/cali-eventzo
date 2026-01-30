@@ -1,0 +1,166 @@
+{
+  "events": [
+    {
+      "id": "1",
+      "title": "Calicut Rock Night",
+      "description": "Experience an electrifying night of live rock music featuring top local bands performing their best original tracks and popular rock anthems. Enjoy powerful vocals, high-energy guitar riffs, and an unforgettable atmosphere filled with music lovers. Perfect for rock enthusiasts looking to unwind, connect with fellow fans, and experience the vibrant local music scene in an exciting live concert setting.",
+      "startDate": "2026-01-14",
+      "endDate": "2026-01-14",
+      "venue": "Beach Stadium, Calicut",
+      "category": "Music",
+      "price": 299,
+      "currency": "INR",
+      "image": "/images/calicut-rock.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Theatre: Midnight Tales",
+      "description": "An immersive evening of thrilling drama and captivating performances, showcasing powerful storytelling, emotional depth, and outstanding acting. Enjoy a memorable theatrical experience filled with intense moments, expressive dialogue, and creative stagecraft that will keep the audience engaged from start to finish.",
+      "startDate": "2026-03-03",
+      "endDate": "2026-03-03",
+      "venue": "City Auditorium, Calicut",
+      "category": "Theatre",
+      "price": 199,
+      "currency": "INR",
+      "image": "/images/midnight.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Calicut Food Festival",
+      "description": "Taste the best of Calicut’s rich culinary heritage with a delightful mix of traditional dishes and popular street food. From aromatic spices and authentic Malabar flavors to modern local favorites, enjoy a food-filled experience that celebrates the city’s vibrant food culture and satisfies every craving.",
+      "startDate": "2026-03-10",
+      "endDate": "2026-03-10",
+      "venue": "Town Square, Calicut",
+      "category": "Food",
+      "price": 99,
+      "currency": "INR",
+      "image": "/images/food-festival.jpg"
+    },
+    {
+      "id": "4",
+      "title": "Art & Craft Workshop",
+      "description": "A fun and interactive hands-on arts and crafts workshop designed for all ages, encouraging creativity and self-expression. Participants can explore different materials, learn new techniques, and create unique handmade pieces in a friendly and inspiring environment perfect for beginners and experienced artists alike.",
+      "startDate": "2026-03-15",
+      "endDate": "2026-03-15",
+      "venue": "Creative Hub, Calicut",
+      "category": "Workshop",
+      "price": 149,
+      "currency": "INR",
+      "image": "/images/art.jpg"
+    },
+    {
+      "id": "5",
+      "title": "Calicut Comedy Night",
+      "description": "Laugh out loud with the best stand-up comedians as they bring the house down with sharp wit, relatable humor, and hilarious real-life stories. Enjoy an evening filled with nonstop laughter, clever punchlines, and unforgettable performances that promise great vibes and an amazing comedy experience.",
+      "startDate": "2026-03-20",
+      "endDate": "2026-03-20",
+      "venue": "Laugh Arena, Calicut",
+      "category": "Comedy",
+      "price": 249,
+      "currency": "INR",
+      "image": "/images/comedy.jpg"
+    },
+    {
+      "id": "6",
+      "title": "Tech Talks: Future of AI",
+      "description": "Join expert speakers and industry leaders as they explore the rapidly evolving world of artificial intelligence. Gain insights into cutting-edge AI technologies, emerging trends, and their impact on industries, society, and everyday life. Participate in thought-provoking discussions, ask questions, and discover what the future of AI holds for innovation and progress.",
+      "startDate": "2026-03-28",
+      "endDate": "2026-03-28",
+      "venue": "Tech Convention Centre, Calicut",
+      "category": "Conference",
+      "price": 399,
+      "currency": "INR",
+      "image": "/images/Ai.jpg"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b02f",
+      "eventId": "2",
+      "email": "chikku09@gmail.com",
+      "eventTitle": "Theatre: Midnight Tales",
+      "tickets": 2,
+      "total": 398,
+      "mobile": "4545454545"
+    },
+    {
+      "id": "d2f5",
+      "eventId": "2",
+      "email": "chikku09@gmail.com",
+      "eventTitle": "Theatre: Midnight Tales",
+      "tickets": 1,
+      "total": 199,
+      "mobile": "8086826234"
+    },
+    {
+      "id": "586c",
+      "eventId": "2",
+      "email": "chikku09@gmail.com",
+      "eventTitle": "Theatre: Midnight Tales",
+      "tickets": 11,
+      "total": 2189,
+      "mobile": "6238626234"
+    },
+    {
+      "id": "5833",
+      "eventId": "1",
+      "email": "adarsh@gmail.com",
+      "eventTitle": "Calicut Rock Night",
+      "eventDate": "2026-01-14",
+      "tickets": 2,
+      "total": 598,
+      "name": "Adarsh",
+      "mobile": "8086826234"
+    },
+    {
+      "id": "bf23",
+      "eventId": "1",
+      "emaildtl": "sfds@gmail.com",
+      "eventTitle": "Calicut Rock Night",
+      "eventDate": "2026-01-14",
+      "tickets": 2,
+      "total": 598,
+      "name": "sdfsdfds",
+      "mobile": "2342342343"
+    },
+    {
+      "id": "8476",
+      "eventId": "1",
+      "email": "amal@gmail.com",
+      "eventTitle": "Calicut Rock Night",
+      "eventDate": "2026-01-14",
+      "tickets": 1,
+      "total": 299,
+      "name": "ADARSH BINU MS",
+      "mobile": "4545454545"
+    }
+  ],
+  "users": [
+    {
+      "id": "6a67",
+      "name": "Adarsh",
+      "email": "ada@gmail.com",
+      "password": "Ada123"
+    },
+    {
+      "id": "e75f",
+      "name": "Adarsh",
+      "email": "adar@gmail.com",
+      "password": "Ada123"
+    },
+    {
+      "id": "c791",
+      "name": "Chikku",
+      "email": "chikku09@gmail.com",
+      "password": "Chikku09"
+    },
+    {
+      "id": "78f6",
+      "name": "Amal",
+      "email": "amal@gmail.com",
+      "mobile": "9098909890",
+      "password": "Amal90"
+    }
+  ],
+  "reviews": []
+}
