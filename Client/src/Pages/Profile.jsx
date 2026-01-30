@@ -5,7 +5,6 @@ import { updateProfile } from "../store/authSlice";
 const Profile = () => {
   const dispatch = useDispatch();
   const { user: currentUser } = useSelector((state) => state.auth);
-
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState(currentUser?.name || "");
   const [email, setEmail] = useState(currentUser?.email || "");
@@ -29,20 +28,12 @@ const Profile = () => {
 
   return (
     <div className="max-w-2xl mx-auto py-25 px-10">
-      {/* Profile Card */}
       <div className="bg-white shadow-lg rounded-xl p-8 border border-gray-200">
         <div className="flex items-center space-x-6">
-          {/* Profile Avatar */}
           <div className="shrink-0">
-            <img
-              className="h-24 w-24 object-cover rounded-full border-4 border-red-900"
-              src={`https://ui-avatars.com/api/?name=${encodeURIComponent(
-                currentUser.name
-              )}&background=red&color=fff&size=128`}
-              alt="Profile avatar"
-            />
+            <img className="h-24 w-24 object-cover rounded-full border-4 border-red-900" src={`https://ui-avatars.com/api/?name=${encodeURIComponent( currentUser.name )}&background=red&color=fff&size=128`} alt="Profile avatar"/>
           </div>
-          {/* Greeting */}
+
           <div>
             <h2 className="text-2xl font-bold text-gray-900">
               Hello, {currentUser.name}!
@@ -53,14 +44,12 @@ const Profile = () => {
           </div>
         </div>
 
-        {/* Success Message */}
         {message && (
           <div className="mt-4 text-center text-green-700 bg-green-100 p-3 rounded-lg">
             {message}
           </div>
         )}
 
-        {/* Profile Info (View Mode) */}
         {!editing && (
           <div className="mt-6 space-y-4">
             <div>
@@ -76,72 +65,44 @@ const Profile = () => {
             <div>
               <p className="text-gray-500 font-medium">Mobile</p>
               <p className="text-lg text-gray-800">
-                {currentUser.mobile || "Not Provided"}
+                {currentUser.mobile}
               </p>
             </div>
 
-            <button
-              onClick={() => setEditing(true)}
-              className="mt-4 w-full bg-red-900 text-white py-2 rounded-lg hover:bg-red-800 transition"
-            >
+            <button onClick={() => setEditing(true)} className="mt-4 w-full bg-red-900 text-white py-2 rounded-lg hover:bg-red-800 transition" >
               Edit Profile
             </button>
           </div>
         )}
 
-        {/* Edit Form (Edit Mode) */}
         {editing && (
           <form onSubmit={handleSave} className="mt-6 space-y-4">
             <div>
               <label className="block text-gray-700 font-medium">
                 Name
               </label>
-              <input
-                type="text"
-                className="mt-1 w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
+              <input type="text" className="mt-1 w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400" value={name} onChange={(e) => setName(e.target.value)} required />
             </div>
 
             <div>
               <label className="block text-gray-700 font-medium">
                 Email
               </label>
-              <input
-                type="email"
-                className="mt-1 w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+              <input type="email" className="mt-1 w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400" value={email} onChange={(e) => setEmail(e.target.value)} required/>
             </div>
 
             <div>
               <label className="block text-gray-700 font-medium">
                 Mobile
               </label>
-              <input
-                type="text"
-                className="mt-1 w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
-                value={mobile}
-                onChange={(e) => setMobile(e.target.value)}
-              />
+              <input type="text" className="mt-1 w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400" value={mobile} onChange={(e) => setMobile(e.target.value)}/>
             </div>
 
             <div className="flex gap-3">
-              <button
-                type="submit"
-                className="flex-1 bg-red-900 text-white py-2 rounded-lg hover:bg-red-800 transition"
-              >
+              <button type="submit" className="flex-1 bg-red-900 text-white py-2 rounded-lg hover:bg-red-800 transition">
                 Save
               </button>
-              <button
-                type="button"
-                onClick={() => setEditing(false)}
-                className="flex-1 bg-gray-300 text-gray-800 py-2 rounded-lg hover:bg-gray-400 transition"
-              >
+              <button type="button" onClick={() => setEditing(false)} className="flex-1 bg-gray-300 text-gray-800 py-2 rounded-lg hover:bg-gray-400 transition" >
                 Cancel
               </button>
             </div>

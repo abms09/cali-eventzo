@@ -29,15 +29,8 @@ const Events = () => {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {events.map((event) => (
-          <div
-            key={event.id}
-            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
-          >
-            <img
-              src={event.image || "https://via.placeholder.com/400x250"}
-              alt={event.title}
-              className="w-full h-48 object-cover"
-            />
+          <div key={event.id} className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition" >
+            <img src={`${import.meta.env.BASE_URL}${event.image}`} alt={event.title} className="w-full h-48 object-cover" />
 
             <div className="p-4">
               <h3 className="text-xl font-semibold text-red-800 mb-2">
@@ -50,10 +43,7 @@ const Events = () => {
                 📍 {event.venue}
               </p>
 
-              <Link
-                to={`/events/${event.id}`}
-                className="inline-block text-red-600 font-semibold hover:underline"
-              >
+              <Link to={`/events/${event.id}`} className="inline-block text-red-600 font-semibold hover:underline" >
                 View Details
               </Link>
             </div>

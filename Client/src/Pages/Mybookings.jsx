@@ -23,19 +23,14 @@ const MyBookings = () => {
     (b) => b.email === currentUser.email
   );
 
-  // get today's date at the start of the day
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
   const handleCancel = async (booking) => {
     try {
-      await axios.delete(
-        `http://localhost:5000/bookings/${booking.id}`
-      );
+      await axios.delete( `http://localhost:5000/bookings/${booking.id}` );
       dispatch(removeBooking(booking.id));
-      alert(
-        "Booking canceled! Refund will be credited to your account soon."
-      );
+      alert("Booking canceled! Refund will be credited to your account soon.");
       setConfirmCancel(null);
     } catch (err) {
       console.error("Cancel failed:", err);
@@ -71,10 +66,7 @@ const MyBookings = () => {
             const isPastBooking = bookingDate < today;
 
             return (
-              <li
-                key={booking.id}
-                className="bg-white border rounded-lg shadow-md p-4"
-              >
+              <li key={booking.id} className="bg-white border rounded-lg shadow-md p-4" >
                 <div className="flex justify-between items-start">
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800">
@@ -110,10 +102,7 @@ const MyBookings = () => {
                     </p>
                   </div>
                   {!isPastBooking && (
-                    <button
-                      onClick={() => setConfirmCancel(booking)}
-                      className="bg-red-900 text-white px-3 py-1 rounded-lg hover:bg-red-800"
-                    >
+                    <button onClick={() => setConfirmCancel(booking)} className="bg-red-900 text-white px-3 py-1 rounded-lg hover:bg-red-800">
                       Cancel
                     </button>
                   )}

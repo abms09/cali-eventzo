@@ -11,6 +11,7 @@ const BookingPage = () => {
   const navigate = useNavigate();
   const { list: events } = useSelector((state) => state.events);
   const bookings = useSelector((state) => state.bookings.list);
+
   const event = events.find((e) => e.id.toString() === id);
 
   const [form, setForm] = useState({
@@ -28,10 +29,7 @@ const BookingPage = () => {
   const total = tickets * pricePerTicket;
 
  useEffect(() => {
-  const existingBooking = bookings.find(
-    (b) => b.eventId.toString() === id &&
-           b.email === currentUser.email
-  );
+  const existingBooking = bookings.find((b) => b.eventId.toString() === id && b.email === currentUser.email);
 
   if (existingBooking) {
     setBooked(true);
@@ -83,10 +81,7 @@ const BookingPage = () => {
     };
 
     try {
-      const res = await axios.post(
-        "http://localhost:5000/bookings",
-        bookingData
-      );
+      const res = await axios.post( "http://localhost:5000/bookings", bookingData);
 
       dispatch(addBooking(res.data));
       setBooked(true);
@@ -100,18 +95,18 @@ const BookingPage = () => {
       <div className="min-h-screen flex items-center justify-center bg-red-100 px-4">
         <div className="bg-white rounded-xl shadow-xl p-8 text-center border border-red-200 max-w-md">
           <h2 className="text-3xl font-bold text-red-900 mb-4">
-            🎉 Booking Confirmed!
+            🎉 Already Booked!
           </h2>
           <p className="text-gray-700 mb-3">
             Your tickets for{" "}
-            <span className="font-semibold">{event.title}</span> are booked
+            <span className="font-semibold">{event.title}</span> are already booked
             successfully.
           </p>
           <p className="text-gray-700">
-            We will send the details to your mobile number.
+            You can see the details in Mybookings section.
           </p>
-          <button onClick={() => navigate("/")} className="mt-6 bg-red-900 text-white py-2 px-6 rounded-lg hover:bg-red-800 transition" >
-            Back to Events
+          <button onClick={() => navigate("/my-bookings")} className="mt-6 bg-red-900 text-white py-2 px-6 rounded-lg hover:bg-red-800 transition" >
+            My Bookings
           </button>
         </div>
       </div>

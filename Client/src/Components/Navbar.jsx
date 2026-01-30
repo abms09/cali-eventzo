@@ -10,7 +10,7 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const user = useSelector((state) => state.auth.user);
-
+  
   const handleLogout = () => {
     dispatch(logout());
     navigate("/login");

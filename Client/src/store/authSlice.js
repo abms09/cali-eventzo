@@ -48,12 +48,6 @@ const authSlice = createSlice({
   }
 });
 
-export const {
-  authStart,
-  authSuccess,
-  authFailure,
-  logout,
-  updateProfile
-} = authSlice.actions;
+export const { authStart,authSuccess,authFailure,logout,updateProfile} = authSlice.actions;
 
 export default authSlice.reducer;

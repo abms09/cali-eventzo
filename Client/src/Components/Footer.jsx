@@ -1,31 +1,24 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { FaFacebookF, FaTwitter, FaInstagram, FaEnvelope} from "react-icons/fa";
 
 const Footer = () => {
   const user = useSelector((state) => state.auth.user);
 
   return (
     <footer className="bg-stone-900 text-stone-200 py-15">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-          {/* Brand */}
           <div>
-            <h3 className="text-lg font-semibold text-white">
-              Calicut Events
-            </h3>
+            <h3 className="text-lg font-semibold text-white">Calicut Events</h3>
             <p className="mt-2 text-sm">
               Explore and book tickets for the best events in Calicut music,
               theatre, workshops, festivals and more!
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-md font-semibold text-white">
-              Quick Links
-            </h4>
+            <h4 className="text-md font-semibold text-white">Quick Links</h4>
             <ul className="mt-2 space-y-2 text-sm">
               <li>
                 <Link to="/" className="hover:text-white">
@@ -73,11 +66,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Support */}
           <div>
-            <h4 className="text-md font-semibold text-white">
-              Support
-            </h4>
+            <h4 className="text-md font-semibold text-white">Support</h4>
             <ul className="mt-2 space-y-2 text-sm">
               <li>
                 <Link to="/contact" className="hover:text-white">
@@ -102,45 +92,23 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Social */}
           <div>
-            <h4 className="text-md font-semibold text-white">
-              Follow Us
-            </h4>
+            <h4 className="text-md font-semibold text-white">Follow Us</h4>
             <div className="flex space-x-4 mt-2 text-xl">
-              <a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                📘
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" >
+                  <FaFacebookF className="text-2xl hover:text-blue-500" />
               </a>
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                🐦
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" >
+                  <FaTwitter className="text-2xl hover:text-sky-400" />
               </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white"
-              >
-                📸
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white" >
+                  <FaInstagram className="text-2xl hover:text-pink-500" />
               </a>
-              <a
-                href="mailto:support@calicutevents.com"
-                className="hover:text-white"
-              >
-                ✉️
+              <a href="mailto:support@calicutevents.com" className="hover:text-white" >
+                  <FaEnvelope className="text-2xl hover:text-yellow-300" />
               </a>
             </div>
           </div>
-
         </div>
 
         <hr className="my-6 border-stone-700" />
@@ -148,7 +116,6 @@ const Footer = () => {
         <p className="text-center text-sm text-stone-400">
           © {new Date().getFullYear()} Calicut Events. All rights reserved.
         </p>
-
       </div>
     </footer>
   );

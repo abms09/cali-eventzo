@@ -42,7 +42,7 @@ const EventDetails = () => {
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
         <div className="relative h-64 md:h-96 overflow-hidden">
           <img
-            src={event.image || "https://via.placeholder.com/1200x600"}
+            src={`${import.meta.env.BASE_URL}${event.image}`}
             alt={event.title}
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           />
